@@ -62,7 +62,7 @@ function gotMedia(mediastream) {
     // Check whether exposureTime is supported or not.
     if (!capabilities.exposureTime) {
       console.error('exposureTime not supported.');
-      return;
+//      return;
     }
     // Check whether focusDistance is supported or not.
     if (!capabilities.focusDistance) {
@@ -70,21 +70,21 @@ function gotMedia(mediastream) {
       return;
     }
     
-    exposureTimeSlider.min = capabilities.exposureTime.min;
-    exposureTimeSlider.max = capabilities.exposureTime.max;
-    exposureTimeSlider.step = capabilities.exposureTime.step;
+    exposureTimeSlider.min = 0; // capabilities.exposureTime.min;
+    exposureTimeSlider.max = 0; // capabilities.exposureTime.max;
+    exposureTimeSlider.step =0; //  capabilities.exposureTime.step;
 
     focusDistanceSlider.min = capabilities.focusDistance.min;
     focusDistanceSlider.max = capabilities.focusDistance.max;
     focusDistanceSlider.step = capabilities.focusDistance.step;
 
-    exposureTimeSlider.value = exposureTimeSliderValue.value = videoTrack.getSettings().exposureTime;
-    exposureTimeSliderValue.value = exposureTimeSlider.value;
+    exposureTimeSlider.value = 0; // exposureTimeSliderValue.value = videoTrack.getSettings().exposureTime;
+    exposureTimeSliderValue.value = 0; // exposureTimeSlider.value;
 
     focusDistanceSlider.value = focusDistanceSliderValue.value = videoTrack.getSettings().focusDistance;
     focusDistanceSliderValue.value = focusDistanceSlider.value;
 
-
+/*
     exposureTimeSlider.oninput = function () {
       exposureTimeSliderValue.value = exposureTimeSlider.value;
       videoTrack.applyConstraints({
@@ -94,6 +94,7 @@ function gotMedia(mediastream) {
         }]
       });
     }
+    */
 
     focusDistanceSlider.oninput = function () {
       focusDistanceSliderValue.value = focusDistanceSlider.value;
