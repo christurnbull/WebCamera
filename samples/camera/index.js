@@ -69,6 +69,8 @@ function gotMedia(mediastream) {
       console.error('focusDistance not supported.');
       alert('focusDistance not supported.');
       return;
+    } else {
+      alert('focusDistance is supported :-)');
     }
     
     exposureTimeSlider.min = 0; // capabilities.exposureTime.min;
