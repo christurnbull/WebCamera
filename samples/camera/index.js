@@ -67,6 +67,7 @@ function gotMedia(mediastream) {
     // Check whether focusDistance is supported or not.
     if (!capabilities.focusDistance) {
       console.error('focusDistance not supported.');
+      alert('focusDistance not supported.');
       return;
     }
     
