@@ -72,7 +72,7 @@ function gotMedia(mediastream) {
     
     exposureTimeSlider.min = 0; // capabilities.exposureTime.min;
     exposureTimeSlider.max = 0; // capabilities.exposureTime.max;
-    exposureTimeSlider.step =0; //  capabilities.exposureTime.step;
+    exposureTimeSlider.step =0; // capabilities.exposureTime.step;
 
     focusDistanceSlider.min = capabilities.focusDistance.min;
     focusDistanceSlider.max = capabilities.focusDistance.max;
