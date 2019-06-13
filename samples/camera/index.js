@@ -59,6 +59,7 @@ function gotMedia(mediastream) {
   // Timeout needed in Chrome, see https://crbug.com/711524
   setTimeout(() => {
     const capabilities = videoTrack.getCapabilities()
+    console.info('capabilities:', capabilities);
     // Check whether exposureTime is supported or not.
     if (!capabilities.exposureTime) {
       console.error('exposureTime not supported.');
